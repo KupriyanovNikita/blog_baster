@@ -1,3 +1,66 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
 body {
-    background: green;
+	/* Отступ снизу, по высоте футера */
+	margin-bottom: 85px !important;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Фиксированная высота футера */
+	height: 85x;
+	background-color: #2299bb;
+	background: linear-gradient(to top, #2299bb, #00bbff);
+	box-shadow: 0px -2px 3px rgba(17,100,255,0.5);
+	border-top: #00f; 
+}
+
+.footer-logo {
+	display: flex ;
+	justify-content: center;
+	padding-top: 2px;
+}
+
+
+.footer-inc {
+	margin-top: 30px; 
+	color: #fff;
+	font-size: 14px;
+}
+
+.footer-social-name {
+	display: block;
+	margin-top: 28px;
+	color: #fff;
+	font-size: 12px;
+	text-align: right;
+}
+.footer-vk {
+	height: 40px;
+	width: 70%;
+	margin-left: 20%; 
+}
+
+.footer-vk img {
+	display: inline-block;
+	width: 30px;
+}
+
+.footer-vk span {
+	display: inline-block;
+	margin-left: 5px; 
+}
+
+.footer-vk a {
+	color: #fff;
+}
+
+.footer-social {
+	padding-top: 10px;
+	display: flex;
+	  justify-content: flex-end;
+	  flex-direction: column;
 }
