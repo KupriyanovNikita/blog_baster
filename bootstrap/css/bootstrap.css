@@ -262,7 +262,7 @@ th {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #f#f#fff !important;
   }
   .table-bordered th,
   .table-bordered td {
