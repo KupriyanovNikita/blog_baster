@@ -8,7 +8,9 @@ body {
     background: #edeef0;
 }
 
-
+.navbar {
+    margin-bottom: 5px;
+}
 .navbar-inverse {
     color: white;
     background: linear-gradient(#00bbff, #2299bb 70%);
