@@ -107,7 +107,7 @@
 
 /***************************************************************************************************************/
 main {
-    padding-bottom: 90px;
+
     flex: 1;
 }
     .blog-header {
@@ -129,16 +129,17 @@ main {
             padding-left: 2%;
             padding-right: 2%;
         }
-        @media (max-width: 767px) {
-
-        }
+    .main {
+        margin: 10px 0;
+    }
         .aside {
-            margin: 10px 0;
+
         }
             .aside-bottom {
                 background: white;
                 padding: 0 5% 1% 5%;
-                border-top: 1px solid white;
+                border: 2px solid #e8e9ec;
+                border-radius: 5px;
                 margin: 0 5%;
                 height: auto;
             }
@@ -152,7 +153,8 @@ main {
 
 /***************************************************************************************************************/
 body {
-  margin: 0;
+    margin: 0;
+    background: #edeef0;
 }
 
 .wrapper {
@@ -162,10 +164,10 @@ body {
 }
 
 .footer {
-   height: 60px;
-  background: linear-gradient(#2299bb,#00bbff 70%);
-  color: #fff;
-  box-shadow: 0px -2px 3px rgba(17,100,255,0.5);
+    height: 60px;
+    background: linear-gradient(#00bbff, #2299bb 70%);
+    color: #fff;
+    box-shadow: 0px -2px 3px rgba(17,100,255,0.5);
 }
 
 .footer a {
