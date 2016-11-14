@@ -1,17 +1,13 @@
-
-
-.wrapper {
-    position: relative;
-    min-height: 100%;
-}
-
 .navbar {
     margin-bottom: 5px;
     border: 0;
 }
+
 .navbar-inverse {
     color: white;
     background: linear-gradient(#00bbff, #2299bb 70%);
+    border: none;
+    box-shadow: 0px 2px 3px rgba(17,100,255,0.5);
 }
         .logo {
             width: 190px;
@@ -108,10 +104,11 @@
                     transform: translate(0px,1px);
                 } 
 
+
 /***************************************************************************************************************/
 main {
     padding-bottom: 90px;
-
+    flex: 1;
 }
     .blog-header {
         box-sizing: border-box;
@@ -154,64 +151,55 @@ main {
                 }
 
 /***************************************************************************************************************/
+body {
+  margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 .footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 85px;
-    /* Фиксированная высота футера */
-    height: 85px;
-    background-color: #2299bb;
-    background: linear-gradient(#00bbff, #2299bb 70%);
-    box-shadow: 0px -2px 3px rgba(17,100,255,0.5);
-    border-top: #00f;
-    margin: 0;
-    padding: 0;
+   height: 60px;
+  background: linear-gradient(#2299bb,#00bbff 70%);
+  color: #fff;
+  box-shadow: 0px -2px 3px rgba(17,100,255,0.5);
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-inc {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+.footer-inc span {
+    display: block;
 }
 
 .footer-logo {
-    display: flex ;
-    justify-content: center;
-    padding-top: 2px;
-}
-
-
-.footer-inc {
-    margin-top: 30px; 
-    color: #fff;
-    font-size: 14px;
-}
-
-.footer-social-name {
     display: flex;
-    margin-top: 28px;
-    color: #fff;
-    font-size: 12px;
-    justify-content: flex-end;
-}
-.footer-vk {
-    height: 40px;
-    width: 70%;
-}
-
-.footer-vk img {
-    display: inline-block;
-    width: 30px;
-}
-
-.footer-vk span {
-    display: inline-block;
-    margin-left: 5px; 
-}
-
-.footer-vk a {
-    color: #fff;
+    justify-content: space-around;
 }
 
 .footer-social {
-    /*padding-top: 10px;*/
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-social-1 {
+    display: block;
+    width: 80px;
+    margin-top: 3px;
+}
+
+.footer-social-1 img {
+    width: 25px;
 }
