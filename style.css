@@ -1,15 +1,21 @@
 html {
-	position: relative;
-	min-height: 100%;
+	/*position: relative;*/
+	/*min-height: 100%;*/
+    height: 100%;
 }
 body {
 	/* Отступ снизу, по высоте футера */
-
+    height: 100%;
     background: #edeef0;
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
 }
 
 .navbar {
     margin-bottom: 5px;
+    border: 0;
 }
 .navbar-inverse {
     color: white;
@@ -36,13 +42,17 @@ body {
                 display: inline-block;
                 height: 30px;
                 width: 30px;
-                background: #ffffff url("logaster/search.png") no-repeat;
+                background: #ffffff url("logaster/search.png") center no-repeat;
                 background-size: 20px 20px;
-                background-position: center;
+
                 border-radius: 4px 0 0 4px;
                 border: 1px solid #cccccc;
                 border-collapse: collapse;
                 color: white;
+            }
+            .icon-search:active {
+                box-shadow: inset 0px 0px 20px 0px rgba(133,133,133,0.5);
+
             }
             .form-control {
                 color: #556666;
@@ -63,7 +73,12 @@ body {
         .user-avatar {
             height: 60px;
             float: right;
+            position: relative;
+            right: 5px;
         }
+            .avatar-menu {
+                display: none;
+            }
             .avatar {
                 float: left;
                 display: inline-block;
@@ -71,7 +86,7 @@ body {
                 width: 40px;
                 background: #ffffff url("logaster/avatar.jpg") no-repeat;
                 background-size: 40px 40px;
-                margin: 10px;
+                margin: 10px 0;
                 border-radius: 50%;
             }
             .user-data {
@@ -87,14 +102,14 @@ body {
                 }
                 .user-setting {}
                     .user-setting-button {
-                        height: 22px;
-                        width: 55px;
+                        height: 20px;
+                        width: 50px;
                         padding: 0;
                         border: 1px solid #cccccc;
                         border-radius: 4px;
                         background: #ffffff;
                         color: #2299bb;
-                        font-size: 13px;
+                        font-size: 12px;
                     }
                 .user-setting-button:active {
                     box-shadow: inset 0px 0px 20px 0px rgba(133,133,133,0.5);
@@ -103,12 +118,13 @@ body {
 
 /***************************************************************************************************************/
 main {
-
+    padding-bottom: 90px;
 
 }
     .blog-header {
         box-sizing: border-box;
         background: blue;
+        margin-right: 1.1%;
     }
         .blog-header-h {
             display: inline-block;
@@ -124,32 +140,42 @@ main {
             padding-left: 2%;
             padding-right: 2%;
         }
-        .aside-bottom {
-            background: white;
-            padding: 0 5% 1% 5%;
-            border-top: 1px solid white;
-            margin: 0 5%;
-            height: auto;
+        @media (max-width: 767px) {
+
         }
-            .aside-bottom h3 {
-                margin-top: 12px;
+        .aside {
+            margin: 10px 0;
+        }
+            .aside-bottom {
+                background: white;
+                padding: 0 5% 1% 5%;
+                border-top: 1px solid white;
+                margin: 0 5%;
+                height: auto;
             }
-            .aside-bottom a {
-                display: block;
-                margin-bottom: 2%;
-            }
+                .aside-bottom h3 {
+                    margin-top: 12px;
+                }
+                .aside-bottom a {
+                    display: block;
+                    margin-bottom: 2%;
+                }
 
 /***************************************************************************************************************/
 .footer {
     position: absolute;
+    left: 0;
     bottom: 0;
     width: 100%;
+    height: 85px;
     /* Фиксированная высота футера */
     height: 85px;
     background-color: #2299bb;
     background: linear-gradient(#00bbff, #2299bb 70%);
     box-shadow: 0px -2px 3px rgba(17,100,255,0.5);
-    border-top: #00f; 
+    border-top: #00f;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-logo {
@@ -192,7 +218,7 @@ main {
 }
 
 .footer-social {
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     display: flex;
     align-items: center;
     flex-direction: column;

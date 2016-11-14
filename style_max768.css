@@ -24,11 +24,30 @@
                 font-size: 16px;
                 border-radius: 0 4px 4px 0;
             }
-                .user-data {
-                    display: none;
-                    height: 40px;
-                    width: auto;
-                    margin: 5px;
-                }
+            .avatar-menu {
+                display: none;
+            }
+            .user-data {
+                display: none;
+                height: 40px;
+                width: auto;
+                margin: 5px;
+            }
 
+
+}
+@media (max-width: 767px) {
+    .aside {
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 378px) {
+    .form-group {
+        margin: 15px 0;
+    }
+    .aside {
+        width: 50%;
+    }
 }
