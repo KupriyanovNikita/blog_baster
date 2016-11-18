@@ -215,6 +215,7 @@ main {
 }
 
 .q-form-article {
+    border-radius: 4px 4px 0 0;
 	height: 25%;
 	padding-left: 2%;
 	border-bottom: 1px solid #edeef0;

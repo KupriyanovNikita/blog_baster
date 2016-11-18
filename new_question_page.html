@@ -11,11 +11,11 @@
     <script type="text/javascript" src="bootstrap/less.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style_max768.css">
-    <link rel="stylesheet" type="text/css" href="start_page_style.css">
+
 </head>
 <body>
+
 <div class="wrapper">
-    <!------------------------------------------------------------------------------------------------------------------->
 
     <header class="navbar navbar-inverse navbar-static-top" role="navigation">
         <div class="container">
@@ -23,7 +23,6 @@
                 <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
                     <div class="logo">
                         <a href="#" class="logo-link"></a>
-
                     </div>
                 </div>
                 <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
@@ -37,59 +36,40 @@
                     </form>
                 </div>
                 <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
-                    <div class="user-setting">
-                        <button class="user-setting-button" formaction="#" id="openDialog">log in</button>
-                        <a href="#" style="color: white; font-size: 10px">Help!</a>
+                    <div class="user-avatar">
+                        <div class="button-drop-menu">
+                            <input type="checkbox" id="check-menu">
+                            <label class="check-menu-label" for="check-menu"></label>
+                        </div>
+                        <div class="avatar"></div>
+                        <div class="user-data">
+                            <p>Mr.Robot</p>
+                            <div class="user-setting">
+                                <a href="#" style="color: white">Setting</a>
+                                <button class="user-setting-button" formaction="#">log out</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
     <!------------------------------------------------------------------------------------------------------------------->
-    <dialog>
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#authorization" data-toggle="tab">Authorization</a></li>
-            <li><a href="#checkIn" data-toggle="tab">Check In</a></li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane active" id="authorization">
-                <form id="authentication" action="handler.php">
-                    <p>
-                        <input name="login" required autofocus placeholder="Login">
-                    </p>
-                    <p>
-                        <input type="password" name="pass" required placeholder="Password">
-                    </p>
-                    <p>
-                        <button type="submit" name="buttonLogin">Login</button>
-                        <button id="closeDialog1" style="border-radius: 4px; width: 48px; height: 21px; font-size: 12px; vertical-align: bottom">Back</button>
-                    </p>
-                </form>
-            </div>
-            <div class="tab-pane" id="checkIn">
-                <p>
-                    <input name="firstName" required autofocus placeholder="First Name">
-                </p>
-                <p>
-                    <input name="lastName" required autofocus placeholder="Last Name">
-                </p>
-                <p>
-                    <input name="login" required autofocus placeholder="Login">
-                </p>
-                <p>
-                    <input type="password" name="pass" required placeholder="Password">
-                </p>
-                <p>
-                    <input type="email" name="email" required placeholder="Email">
-                </p>
-                <p>
-                    <button type="submit" name="buttonRegistration">Registration</button>
-                    <button id="closeDialog2" style="border-radius: 4px; width: 48px; height: 21px; font-size: 12px; vertical-align: bottom">Back</button>
-                </p>
+
+    <div class="drop-menu">
+        <div class="drop-menu-content">
+            <div class="drop-menu-avatar"></div>
+            <div class="drop-menu-setting">
+                <p>Mr.Robot</p>
+                <div class="user-setting">
+                    <a href="#">Setting</a>
+                    <button class="user-setting-button" formaction="#">log out</button>
+                </div>
             </div>
         </div>
+    </div>
 
-    </dialog>
     <!------------------------------------------------------------------------------------------------------------------->
 
     <main>
@@ -237,51 +217,58 @@
     </div>
 
 </div>
-
-    <script>
-        var dialog = document.querySelector('dialog');
-        document.querySelector('#openDialog').onclick = function() {
-            dialog.showModal();
-        };
-        document.querySelector('#closeDialog1').onclick = function() {
-            dialog.close(); // Прячем диалоговое окно
-        };
-        document.querySelector('#closeDialog2').onclick = function() {
-            dialog.close(); // Прячем диалоговое окно
-        };
-    </script>
-
-    <script type="text/javascript">
-
-        var cells = document.getElementsByName('js');
-
-        for(var i=0; i<cells.length;i++){
-            cells[i].addEventListener('click', select);
-        }
-        function select(){
-            for(var i=0; i<cells.length;i++){
-                if(cells[i].classList.contains('active-question')){
-                    cells[i].classList.remove('active-question');
-                }
+<!-- <script>
+            var	k = new Date();
+            var	day = k.getDate();
+            var month = k.getMonth() + 1;
+            var year = k.getYear()-100;
+            var hours = k.getHours();
+            var minutes = k.getMinutes();
+            if (day < 10) {
+                day = "0" + day;
             }
-            this.classList.toggle("active-question");
+            if (month < 10) {
+                month = "0" + day;
+            }
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            document.getElementById('data').innerHTML =
+            day + "." + month + "." + year + " " + hours + ":" + minutes;
+        </script> -->
+<script type="text/javascript">
+
+    var cells = document.getElementsByName('js');
+
+    for(var i=0; i<cells.length;i++){
+        cells[i].addEventListener('click', select);
+    }
+    function select(){
+        for(var i=0; i<cells.length;i++){
+            if(cells[i].classList.contains('active-question')){
+                cells[i].classList.remove('active-question');
+            }
         }
+        this.classList.toggle("active-question");
+    }
 
-        var l = document.getElementsByClassName('form-like');
-        for(var i=0; i<l.length;i++){
-            l[i].addEventListener('click', selectL);
-        }
-        function selectL(){
-            this.classList.toggle("active-question");
-        }
+    var l = document.getElementsByClassName('form-like');
+    for(var i=0; i<l.length;i++){
+        l[i].addEventListener('click', selectL);
+    }
+    function selectL(){
+        this.classList.toggle("active-question");
+    }
 
-    </script>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.js"></script>
-
+</script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
+
 
