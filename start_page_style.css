@@ -1,0 +1,89 @@
+.user-setting {
+    float: right;
+    height: 60px;
+}
+.user-setting a {
+    display: inline;
+    color: #2299bb;
+    float: left;
+    margin-top: 36px;
+    margin-right: 10px;
+}
+
+.user-setting-button {
+    display: inline-block;
+    margin: 10px -5px 0 0;
+    float: right;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    .user-setting {
+        float: right;
+        height: 60px;
+    }
+        .user-setting a {
+            display: inline;
+            color: #2299bb;
+            float: right;
+            margin: 5px 23% 0 10px;
+        }
+
+        .user-setting-button {
+            display: inline-block;
+            margin: 17px -5px 0 0;
+            float: right;
+            width: 60px;
+            height: 25px;
+            font-size: 15px;
+        }
+}
+@media (max-width: 330px) {
+    .user-setting {
+        float: right;
+        height: 60px;
+    }
+        .user-setting a {
+            display: inline;
+            color: #2299bb;
+            float: right;
+            margin: 5px 8px 0 8px;
+        }
+
+        .user-setting-button {
+            display: inline-block;
+            margin: 19px -5px 0 0;
+            float: right;
+            width: 50px;
+            height: 20px;
+            font-size: 12px;
+        }
+}
+
+/***********************************************************************************************************************/
+button[name="buttonLogin"]{
+    background: linear-gradient(#35f535 30%, #32c732 100%);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    width: 70px;
+    height: 30px;
+}
+button[name="buttonLogin"]:active {
+    box-shadow: inset 0px 0px 20px 0px rgba(133,133,133,0.5);
+    transform: translate(0px,1px);
+}
+button[name="buttonRegistration"] {
+    background: linear-gradient(#35f535 30%, #32c732 100%);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+button[name="buttonRegistration"]:active {
+    box-shadow: inset 0px 0px 20px 0px rgba(133,133,133,0.5);
+    transform: translate(0px,1px);
+}

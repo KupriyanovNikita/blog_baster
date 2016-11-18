@@ -1,5 +1,9 @@
+button:focus {
+    outline: none;
+}
+
 .navbar {
-    margin-bottom: 5px;
+    margin-bottom: 0;
     border: 0;
 }
 
@@ -67,6 +71,9 @@
             .avatar-menu {
                 display: none;
             }
+            .button-drop-menu {
+                display: none;
+            }
             .avatar {
                 float: left;
                 display: inline-block;
@@ -93,23 +100,38 @@
                         height: 20px;
                         width: 50px;
                         padding: 0;
-                        border: 1px solid #cccccc;
                         border-radius: 4px;
-                        background: #ffffff;
-                        color: #2299bb;
+                        background: linear-gradient(#35f535 30%, #32c732 100%);
+                        color: white;
                         font-size: 12px;
+                        border: none;
                     }
                 .user-setting-button:active {
                     box-shadow: inset 0px 0px 20px 0px rgba(133,133,133,0.5);
                     transform: translate(0px,1px);
-                } 
+                }
+.drop-menu {
+    display: none;
+}
+section {
+    display: none;
+}
+/***************************************************************************************************************/
+dialog {
+        width: 500px;
+        z-index: 10000;
+    }
+dialog::backdrop {
+        background-color: rgba(0,0,0,0.7) !important;
+    }
 
 
 /***************************************************************************************************************/
 main {
-    padding-bottom: 90px;
+
     flex: 1;
 }
+
 
 .p-tags{
 	height: 20%;
@@ -119,30 +141,27 @@ main {
 	color:#fff;
 }
 
-ul {
+.content-list {
 	padding: 0;
 	margin:0;
 	height: 80%;
 }
-
-ul li {
+.content-list li {
 	list-style: none;
 	display: block;
 	height: 20%;
 	border-bottom:1px solid #d3d3d3;
 }
 
-ul li a {
+.content-list li a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height:100%;
 	
 	}
-	
 
-	
-ul li a:hover {
+.content-list li a:hover {
 	background-color: #00bbff /*#fafafa*/;
 	color: #fff;
 	opacity: 0.5;
@@ -280,7 +299,7 @@ ul li a:hover {
 	width: 50%
 }
 
-.active {
+.active-question {
     background-color: #00bbff /*#fafafa*/;
     color: #fff;
 }
@@ -289,6 +308,7 @@ ul li a:hover {
 body {
   margin: 0;
   background-color: #edeef0;
+
 }
 
 .wrapper {
@@ -302,6 +322,7 @@ body {
   background: linear-gradient(#00bbff,#2299bb 70%);
   color: #fff;
   box-shadow: 0px -2px 3px rgba(17,100,255,0.5);
+
 }
 
 .footer a {

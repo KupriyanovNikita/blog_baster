@@ -1,10 +1,5 @@
 @media (max-width: 768px) {
-        .logo {
-            width: 52px;
-            height: 60px;;
-            background: url("logaster/1small.png") no-repeat;
-            background-size: 100% 100%;
-        }
+
         .form-group {
             margin: 15px;
             display: inline-block;
@@ -18,18 +13,12 @@
                 font-size: 16px;
                 border-radius: 0 4px 4px 0;
             }
-            .avatar-menu {
-                display: inline-block;
-                background: #000;
-                height: 25px;
-                width: 25px;
-                margin: 17.5px 5px 17.5px 0;
-            }
+
             .avatar {
                 float: right;
             }
             .user-data {
-                display: none;
+
                 height: 40px;
                 width: auto;
                 margin: 5px;
@@ -38,10 +27,100 @@
 
 }
 @media (max-width: 767px) {
+    .logo {
+        width: 52px;
+        height: 60px;;
+        background: url("logaster/1small.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    section {
+        display: block;
+    }
     .aside {
         width: 40%;
     }
-
+    .user-avatar {
+        width: 100%;
+    }
+        .button-drop-menu {
+            display: block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            margin: 10px 0 10px 0;
+            float: right;
+            position: relative;
+            border-radius: 5px;
+            background-color: white;
+            background: linear-gradient(white 50%, rgb(180, 180, 180) 100% );
+        }
+        .button-drop-menu:active {
+            box-shadow: inset 0px 0px 20px 0px rgba(133,133,133,0.5);
+            transform: translate(0px,1px);
+        }
+            #check-menu {
+                display: none;
+            }
+            .check-menu-label {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                left: 0;
+                margin: 0;
+            }
+        .avatar {
+            display: none;
+        }
+        .user-data {
+            display: none;
+        }
+    .drop-menu {
+        display: block;
+        position: relative;
+        float: right;
+    }
+    #check-menu:checked .drop-menu-content {
+        background: black;
+    }
+        .drop-menu-content {
+            float: right;
+            height: 60px;
+            border: 2px solid #e2e2e2;
+            border-radius: 5px;
+            background: white;
+            padding-left: 5px;
+        }
+            .drop-menu-avatar {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background: #ffffff url("logaster/avatar.jpg") no-repeat;
+                background-size: 40px 40px;
+                margin: 10px 0;
+                border-radius: 50%;
+            }
+            .drop-menu-setting {
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 3px;
+            }
+                .drop-menu-setting p {
+                    display: inline-block;
+                    font-size: 20px;
+                    margin: 0 10px;
+                }
+                .user-setting {}
+                    .user-setting a {
+                        display: inline;
+                        color: #2299bb;
+                        float: right;
+                        margin: 0 5px;
+                    }
+                    .user-setting-button {
+                        display: inline-block;
+                        margin: 0 5px;
+                    }
 }
 
 @media (max-width: 378px) {
@@ -50,5 +129,13 @@
     }
     .aside {
         width: 50%;
+    }
+}
+@media (max-width: 330px) {
+    .logo {
+        margin-left: -15px;
+    }
+    .user-avatar {
+        margin-right: -15px;
     }
 }
