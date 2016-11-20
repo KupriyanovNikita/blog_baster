@@ -1,0 +1,86 @@
+.section {
+    display: block;
+    height: auto;
+}
+    .q-form {
+        height: auto;
+        position: relative;
+    }
+        .q-form-article {
+            min-height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+            .q-form-article p {
+                width: 100%;
+                word-wrap: break-word;
+                margin: 0;
+                padding: 5px;
+            }
+        .q-form-content {
+            width: 100%;
+            display: inline-block;
+            padding: 0;
+        }
+            .q-form-content .form-date {
+                display: inline-block;
+                border: none;
+                font-size: 11px;
+                color: #bbbbbb;
+            }
+                .q-form-content .form-date span {
+                    padding: 0 5px;
+                }
+            .q-form-content .form-tags {
+                display: block;
+                border: none;
+                font-size: 11px;
+                padding: 5px 0;
+            }
+                .q-form-content .form-tags span {
+                    padding: 0 5px;
+                }
+            .q-form-content p {
+                width: 100%;
+                word-wrap: break-word;
+                margin: 0;
+                padding: 5px 5px 0 5px;
+            }
+        .q-form-footer {
+            display: inline-block;
+            border: none;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding-top: 10px;
+            padding-left: 5px;
+            padding-bottom: 5px;
+            padding-right: 5px;
+        }
+            .q-form-footer .form-author {
+                display: inline-block;
+                border: none;
+                width: 80%;
+                height: 45px;
+            }
+                .q-form-footer .form-author .post-avatar {
+                    display: inline-block;
+                    height: 40px;
+                    width: 40px;
+                    background: #ffffff url(logaster/avatar.jpg) no-repeat;
+                    background-size: 40px 40px;
+                    margin: 0;
+                    border-radius: 50%;
+                }
+                .q-form-footer .form-author span {
+                    display: inline-block;
+                }
+            .q-form-footer .form-like {
+                position: relative;
+                bottom: 0;
+                display: inline-block;
+                border: none;
+                width: 20%;
+                height: 45px;
+                float: right;
+            }

@@ -1,0 +1,22 @@
+.section {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+    .blog-header {
+        border: 1px solid #d3d3d3;
+        box-shadow: 0 0 7px #d3d3d3;
+        border-radius: 4px;
+        width: 50%;
+        margin-bottom: 15px;
+        height: 60px;
+        display: flex;
+        background-color: #fff;
+    }
+        .blog-header i {
+            display: block;
+            margin-left: 8%;
+            margin-top: 18px;
+        }
