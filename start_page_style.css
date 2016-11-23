@@ -87,3 +87,48 @@ button[name="buttonRegistration"]:active {
     box-shadow: inset 0px 0px 20px 0px rgba(133,133,133,0.5);
     transform: translate(0px,1px);
 }
+
+/******NG*****/
+
+*:focus {
+    outline: none;
+}
+
+.form-authorization {
+    margin-top: 30px;
+}
+ p {
+    margin-bottom: 15px;
+}
+input {
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+    height: 30px;
+}
+
+input:focus {
+    background: #fff;
+    border:1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+}
+
+input:required {
+    background: #fff url(logaster/red_asterisk.png) no-repeat 98% center;
+}
+
+input:focus:invalid { 
+    background: #fff url(logaster/invalid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+
+#checkIn input:required:valid { 
+    background: #fff url(logaster/valid.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+#checkIn {
+    margin-top: 30px;
+}

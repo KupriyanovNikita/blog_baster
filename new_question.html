@@ -4,17 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>blog_baster</title>
-
+	<title>New_question</title>
 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet/less" href="main.less">
 	<script type="text/javascript" src="bootstrap/less.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="style_max768.css">
+	<link rel="stylesheet" type="text/css" href="new_question.css">
 	<link rel="stylesheet" href="fonts/cherryswash/cherryswash.css">
 </head>
 <body>
-
 	<div class="wrapper">
 
 		<header class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -22,7 +20,7 @@
 				<div class="row">
 					<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
 						<div class="logo">
-							<a href="#" class="logo-link"></a>
+							<a href="index.html" class="logo-link"></a>
 						</div>
 					</div>
 					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
@@ -46,7 +44,7 @@
 								<p>Mr.Robot</p>
 								<div class="user-setting">
 									<a href="settings.html" style="color: white">Setting</a>
-									<a href="start_page.html"><button class="user-setting-button" formaction="#">log out</button></a>
+									<button class="user-setting-button" formaction="#">log out</button>
 								</div>
 							</div>
 						</div>
@@ -63,102 +61,45 @@
 				<div class="drop-menu-setting">
 					<p>Mr.Robot</p>
 					<div class="user-setting">
-						<a href="#">Setting</a>
+						<a href="settings.html">Setting</a>
 						<button class="user-setting-button" formaction="#">log out</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
-
-
 		<main>
-
 			<div class="container">
 				<div class="row">
-
 					<div class="col-sm-9 article">
 						<div class="section">
-
-							<div class="blog-header">
-								<a href="#" class="blog-header-h centring active-question" name="js">
-									<i>New Questions</i>
-								</a>
-								<a href="#" class="popular-article centring" name="js">
-									<i>Hot questions</i>
-								</a>
-							</div>
-
-							<div class="q-form">
-								<div class="q-form-article centring">
-									<p>How to build a moon park?jdfoijh gdfhg isdhf giou</p>
+								
+								<div class="form_new_question">
+									<form action="#">
+										<ul>
+											<li>
+											<span>New question</span>
+											</li>
+											<li>
+												<label for="title">Title:</label>
+												<input type="text" name="title" required>
+											</li>
+											<li>
+												<label for="question">Question:</label>
+												<textarea name="question" cols="40" rows="6" required></textarea>
+											</li>
+											<li>
+												<label for="tags">Tags:</label>
+												<input type="text" name="tags" required>
+											</li>
+											<li>
+												<button class="submit" type="submit">ASK!</button>
+											</li>
+										</ul>
+									</form>
 								</div>
-								<div class="q-form-content">
-									<span>ALorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis reprehenderit dolor error laborum quidem eligendi eius magni molestiae. Veritatis incidunt velit quibusdam iure explicabo, cupiditate temporibus. Quasi, quaerat excepturi assumenda.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat sapiente ipsa et dignissimos aspernatur odit reiciendis, accusamus cum excepturi reprehenderit autem illo ab? Nisi sunt eaque vitae quasi sit, cumque.
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, natus ratione soluta inventore earum cumque similique voluptatem pariatur ea maxime harum cum, unde necessitatibus aliquam accusantium iusto praesentium, dicta eveniet.
-									</p>
-									</span>
-								</div>
-								<div class="q-form-footer">
-									<div class="form-author centring">
-										<span> Nikita_baster</span>
-									</div>
-									<div class="form-date centring">
-										<span>
-										</span>
-									</div>
-									<div class="form-like centring">
-										<span style="background:  url(logaster/like.svg); width: 16px;height: 16px;background-size:100% 100%"></span>
-									</div>
-								</div>
-							</div>
-
-							<div class="q-form">
-								<div class="q-form-article centring">
-									<p>How to build a moon park?jdfoijh gdfhg isdhf giou</p>
-								</div>
-								<div class="q-form-content">
-									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur vel neque vitae libero quaerat fuga minus facere adipisci sint. Error harum maxime atque doloremque esse deserunt repellendus, aut sunt?</span>
-								</div>
-								<div class="q-form-footer">
-									<div class="form-author centring">
-										<span> Nikita_baster</span>
-									</div>
-									<div class="form-date centring">
-										<span id="">
-										</span>
-									</div>
-									<div class="form-like centring">
-										<span style="background:  url(logaster/like.svg); width: 16px;height: 16px;background-size:100% 100%"></span>
-									</div>
-								</div>
-							</div>
-
-							<div class="q-form">
-								<div class="q-form-article centring">
-									<p>How to build a moon park?jdfoijh gdfhg isdhf giou</p>
-								</div>
-								<div class="q-form-content">
-									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dignissimos voluptatum tempora fugit, enim labore rem eveniet sed ad modi repellat praesentium quia. Facilis quisquam placeat numquam aut, laboriosam, cumque.</span>
-								</div>
-								<div class="q-form-footer">
-									<div class="form-author centring">
-										<span> Nikita_baster</span>
-									</div>
-									<div class="form-date centring">
-										<span id="data">
-										</span>
-									</div>
-									<div class="form-like centring">
-										<span style="background:  url(logaster/like.svg); width: 16px;height: 16px;background-size:100% 100%"></span>
-									</div>
-								</div>
-							</div>
 
 						</div>
-
 					</div>
 
 					<div class="col-sm-3">
@@ -173,7 +114,6 @@
 									<li><a href="#">B_baster</a></li>
 								</ul>
 							</div>
-
 							<div class="aside-bottom">
 								<div class="p-tags centring"><span>Best Members</span></div>
 								<ul class="content-list">
@@ -186,11 +126,9 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</main>
-
 
 		<div class="footer">
 			<div class="container">
@@ -203,7 +141,7 @@
 					<div class="col-xs-4">
 						<div class="footer-logo">
 							<div class="logo">
-								<a href="#" class="logo-link"></a>
+								<a href="index.html" class="logo-link"></a>
 							</div>
 						</div>
 					</div>
@@ -216,7 +154,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 		  <!-- <script>
 		  			var	k = new Date();
@@ -270,5 +207,3 @@
 		  		<script src="js/bootstrap.js"></script>
 		  	</body>
 		  	</html>
-
-

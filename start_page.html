@@ -1,211 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>blog_baster</title>
+	<title>blog_baster</title>
 
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet/less" href="main.less">
-    <script type="text/javascript" src="bootstrap/less.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style_max768.css">
-    <link rel="stylesheet" type="text/css" href="start_page_style.css">
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/cherryswash/cherryswash.css">
+	<link rel="stylesheet/less" href="main.less">
+	<script type="text/javascript" src="bootstrap/less.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style_max768.css">
+	<link rel="stylesheet" type="text/css" href="start_page_style.css">
 </head>
 <body>
-<div class="wrapper">
-    <!------------------------------------------------------------------------------------------------------------------->
+	<div class="wrapper">
 
-    <header class="navbar navbar-inverse navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
-                    <div class="logo">
-                        <a href="#" class="logo-link"></a>
 
-                    </div>
-                </div>
-                <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
-                    <form class="form-search">
-                        <div class="form-group">
-                            <div>
-                                <button class="icon-search" formaction="#"></button>
-                                <input type="text" class="form-control" placeholder="Search!">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
-                    <div class="user-setting">
-                        <button class="user-setting-button" formaction="#" id="openDialog">log in</button>
-                        <a href="#" style="color: white; font-size: 10px">Help!</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!------------------------------------------------------------------------------------------------------------------->
-    <dialog>
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#authorization" data-toggle="tab">Authorization</a></li>
-            <li><a href="#checkIn" data-toggle="tab">Check In</a></li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane active" id="authorization">
-                <form id="authentication" action="handler.php">
-                    <p>
-                        <input name="login" required autofocus placeholder="Login">
-                    </p>
-                    <p>
-                        <input type="password" name="pass" required placeholder="Password">
-                    </p>
-                    <p>
-                        <button type="submit" name="buttonLogin">Login</button>
-                        <button id="closeDialog1" style="border-radius: 4px; width: 48px; height: 21px; font-size: 12px; vertical-align: bottom">Back</button>
-                    </p>
-                </form>
-            </div>
-            <div class="tab-pane" id="checkIn">
-                <p>
-                    <input name="firstName" required autofocus placeholder="First Name">
-                </p>
-                <p>
-                    <input name="lastName" required autofocus placeholder="Last Name">
-                </p>
-                <p>
-                    <input name="login" required autofocus placeholder="Login">
-                </p>
-                <p>
-                    <input type="password" name="pass" required placeholder="Password">
-                </p>
-                <p>
-                    <input type="email" name="email" required placeholder="Email">
-                </p>
-                <p>
-                    <button type="submit" name="buttonRegistration">Registration</button>
-                    <button id="closeDialog2" style="border-radius: 4px; width: 48px; height: 21px; font-size: 12px; vertical-align: bottom">Back</button>
-                </p>
-            </div>
-        </div>
+		<header class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+						<div class="logo">
+							<a href="#" class="logo-link"></a>
 
-    </dialog>
-    <!------------------------------------------------------------------------------------------------------------------->
+						</div>
+					</div>
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+						<form class="form-search">
+							<div class="form-group">
+								<div>
+									<button class="icon-search" formaction="#"></button>
+									<input type="text" class="form-control" placeholder="Search!">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+						<div class="user-setting">
+							<button class="user-setting-button" formaction="index.html" id="openDialog">log in</button>
+							<a href="#" style="color: white; font-size: 10px">Help!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-    <main>
+		<dialog>
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#authorization" data-toggle="tab">Authorization</a></li>
+				<li><a href="#checkIn" data-toggle="tab">Check In</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="authorization">
+				<form id="authentication" class="form-authorization" action="handler.php">
+						<p>
+							<input type="text" name="login" required autofocus placeholder="Login">
+						</p>
+						<p>
+							<input type="password" name="pass" required placeholder="Password">
+						</p>
+						<p>
+							<button type="submit" name="buttonLogin">Login</button>
+							<button id="closeDialog1" style="border-radius: 4px; width: 48px; height: 21px; font-size: 12px; vertical-align: bottom">Back</button>
+						</p>
+					</form>
+				</div>
+				<div class="tab-pane" id="checkIn">
+					<p>
+						<input name="firstName" required autofocus placeholder="First Name">
+					</p>
+					<p>
+						<input name="lastName" required autofocus placeholder="Last Name">
+					</p>
+					<p>
+						<input name="login" required autofocus placeholder="Login">
+					</p>
+					<p>
+						<input type="password" name="pass" required placeholder="Password">
+					</p>
+					<p>
+						<input type="email" name="email" required placeholder="Email">
+					</p>
+					<p>
+						<button type="submit" name="buttonRegistration">Registration</button>
+						<button id="closeDialog2" style="border-radius: 4px; width: 48px; height: 21px; font-size: 12px; vertical-align: bottom">Back</button>
+					</p>
+				</div>
+			</div>
 
-        <div class="container">
-            <div class="blog-header">
-                <div class="blog-header-h">
-                    <h2>New Questions</h2>
-                </div>
-                <div class="popular-article">
-                    <a href="#" id="#">Hot questions</a>
-                </div>
-            </div>
-        </div>
+		</dialog>
 
-        <div class="container">
-            <div class="row main">
 
-                <div class="col-sm-9 article">
-                    <div class="section" style="background: white; border: 2px solid #e8e9ec; border-radius: 5px; word-wrap: break-word; font-size: 20px">
-                        <p style="">
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                        </p>
+		<main>
 
-                    </div>
-                    <div class="section" style="background: white; border: 2px solid #e8e9ec; border-radius: 5px; word-wrap: break-word; font-size: 20px">
-                        <p style="">
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                        </p>
+			<div class="container">
+				<div class="row main">
 
-                    </div>
-                    <div class="section" style="background: white; border: 2px solid #e8e9ec; border-radius: 5px; word-wrap: break-word; font-size: 20px">
-                        <p style="">
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                            qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-                        </p>
+					<div class="col-sm-9 article">
+						<div class="section">
 
-                    </div>
-                </div>
+							<div class="blog-header">
+								<a href="#" class="blog-header-h centring active-question" name="js">
+									<i>New Questions</i>
+								</a>
+								<a href="#" class="popular-article centring" name="js">
+									<i>Hot questions</i>
+								</a>
+							</div>
 
-                <div class="col-sm-3">
-                    <div class="aside">
-                        <div class="aside-top" >
+							<div class="q-form">
+								<div class="q-form-article centring">
+									<p>How to build a moon park?jdfoijh gdfhg isdhf giou</p>
+								</div>
+								<div class="q-form-content">
+									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis reprehenderit dolor error laborum quidem eligendi eius magni molestiae. Veritatis incidunt velit quibusdam iure explicabo, cupiditate temporibus. Quasi, quaerat excepturi assumenda.</span>
+								</div>
+								<div class="q-form-footer">
+									<div class="form-author centring">
+										<span> Nikita_baster</span>
+									</div>
+									<div class="form-date centring">
+										<span>
+										</span>
+									</div>
+									<div class="form-like centring">
+										<span style="background:  url(logaster/like.svg); width: 16px;height: 16px;background-size:100% 100%"></span>
+									</div>
+								</div>
+							</div>
 
-                        </div>
+							<div class="q-form">
+								<div class="q-form-article centring">
+									<p>How to build a moon park?jdfoijh gdfhg isdhf giou</p>
+								</div>
+								<div class="q-form-content">
+									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur vel neque vitae libero quaerat fuga minus facere adipisci sint. Error harum maxime atque doloremque esse deserunt repellendus, aut sunt?</span>
+								</div>
+								<div class="q-form-footer">
+									<div class="form-author centring">
+										<span> Nikita_baster</span>
+									</div>
+									<div class="form-date centring">
+										<span id="">
+										</span>
+									</div>
+									<div class="form-like centring">
+										<span style="background:  url(logaster/like.svg); width: 16px;height: 16px;background-size:100% 100%"></span>
+									</div>
+								</div>
+							</div>
 
-                        <div class="aside-bottom">
-                            <h3>Best Members</h3>
-                            <p>
-                                <a href="#">Mr.Freeman</a>
-                                <a href="#">Dr.House</a>
-                                <a href="#">Bender</a>
-                                <a href="#">Queen Victoria</a>
-                                <a href="#">V. Pupkin</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+							<div class="q-form">
+								<div class="q-form-article centring">
+									<p>How to build a moon park?jdfoijh gdfhg isdhf giou</p>
+								</div>
+								<div class="q-form-content">
+									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dignissimos voluptatum tempora fugit, enim labore rem eveniet sed ad modi repellat praesentium quia. Facilis quisquam placeat numquam aut, laboriosam, cumque.</span>
+								</div>
+								<div class="q-form-footer">
+									<div class="form-author centring">
+										<span> Nikita_baster</span>
+									</div>
+									<div class="form-date centring">
+										<span id="data">
+										</span>
+									</div>
+									<div class="form-like centring">
+										<span style="background:  url(logaster/like.svg); width: 16px;height: 16px;background-size:100% 100%"></span>
+									</div>
+								</div>
+							</div>
 
-            </div>
-        </div>
+						</div>
+					</div>
 
-    </main>
+					<div class="col-sm-3">
+						<div class="aside">
+							<div class="aside-top" >
+								<div class="p-tags centring"><span>Popular tags</span></div>
+								<ul class="content-list">
+									<li><a href="#">B_baster</a></li>
+									<li><a href="#">B_baster</a></li>
+									<li><a href="#">B_baster</a></li>
+									<li><a href="#">B_baster</a></li>
+									<li><a href="#">B_baster</a></li>
+								</ul>
+							</div>
 
-    <!------------------------------------------------------------------------------------------------------------------->
+							<div class="aside-bottom">
+								<div class="p-tags centring"><span>Best Members</span></div>
+								<ul class="content-list">
+									<li><a href="#">MR.Robot</a></li>
+									<li><a href="#">MR.Robot</a></li>
+									<li><a href="#">MR.Robot</a></li>
+									<li><a href="#">MR.Robot</a></li>
+									<li><a href="#">MR.Robot</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-4">
-                    <div class="footer-inc">
-                        <span>© 2016 b_baster, Inc.</span>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="footer-logo">
-                        <div class="logo">
-                            <a href="#" class="logo-link"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="footer-social">
-                        <a href="https://vk.com/gde_9i" class="footer-social-1"><img src="logaster/vk.png" alt="vk"> Nik</a>
-                        <a href="https://vk.com/id361256799" class="footer-social-1"><img src="logaster/vk.png" alt="vk">  Vova</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+				</div>
+			</div>
 
-</div>
+		</main>
 
-    <script>
-        var dialog = document.querySelector('dialog');
-        document.querySelector('#openDialog').onclick = function() {
-            dialog.showModal();
-        };
-        document.querySelector('#closeDialog1').onclick = function() {
+
+
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4">
+						<div class="footer-inc">
+							<span>© 2016 b_baster, Inc.</span>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="footer-logo">
+							<div class="logo">
+								<a href="#" class="logo-link"></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="footer-social">
+							<a href="https://vk.com/gde_9i" class="footer-social-1"><img src="logaster/vk.png" alt="vk"> Nik</a>
+							<a href="https://vk.com/id361256799" class="footer-social-1"><img src="logaster/vk.png" alt="vk">  Vova</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		var dialog = document.querySelector('dialog');
+		document.querySelector('#openDialog').onclick = function() {
+			dialog.showModal();
+		};
+		document.querySelector('#closeDialog1').onclick = function() {
             dialog.close(); // Прячем диалоговое окно
-        };
-        document.querySelector('#closeDialog2').onclick = function() {
+          };
+          document.querySelector('#closeDialog2').onclick = function() {
             dialog.close(); // Прячем диалоговое окно
-        };
-    </script>
+          };
+        </script>
+        <script type="text/javascript">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.js"></script>
+        	var cells = document.getElementsByName('js');
 
-</body>
-</html>
+        	for(var i=0; i<cells.length;i++){
+        		cells[i].addEventListener('click', select);
+        	}
+        	function select(){
+        		for(var i=0; i<cells.length;i++){
+        			if(cells[i].classList.contains('active-question')){
+        				cells[i].classList.remove('active-question');
+        			}
+        		}
+        		this.classList.toggle("active-question");
+        	}
+
+        	var l = document.getElementsByClassName('form-like');
+        	for(var i=0; i<l.length;i++){
+        		l[i].addEventListener('click', selectL);
+        	}
+        	function selectL(){
+        		this.classList.toggle("active-question");
+        	}
+        </script>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap/js/bootstrap.js"></script>
+
+      </body>
+      </html>
 

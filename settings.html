@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>blog_baster</title>
+
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet/less" href="main.less">
+	<script type="text/javascript" src="bootstrap/less.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style_max768.css">
+	<link rel="stylesheet" type="text/css" href="setting.css">
+	<link rel="stylesheet" href="fonts/cherryswash/cherryswash.css">
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+						<div class="logo">
+							<a href="index.html" class="logo-link"></a>
+						</div>
+					</div>
+					<div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+						<form class="form-search">
+							<div class="form-group">
+								<div>
+								<button class="icon-search" formaction="#"></button>
+								<input type="text" class="form-control" placeholder="Search!">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+						<div class="user-avatar">
+							<div class="button-drop-menu">
+								<input type="checkbox" id="check-menu">
+								<label class="check-menu-label" for="check-menu"></label>
+							</div>
+							<div class="avatar"></div>
+							<div class="user-data">
+								<p>Mr.Robot</p>
+								<div class="user-setting">
+									<a href="#" style="color: white">Setting</a>
+									<button class="user-setting-button" formaction="#">log out</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+
+		<div class="drop-menu">
+			<div class="drop-menu-content">
+				<div class="drop-menu-avatar"></div>
+				<div class="drop-menu-setting">
+					<p>Mr.Robot</p>
+					<div class="user-setting">
+						<a href="#">Setting</a>
+						<button class="user-setting-button" formaction="#">log out</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<main>
+
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-9 article">
+						<div class="section">
+
+							<div class="set-form">
+
+								<form class="settings-form" method="post" name="settings-form">
+									<ul>
+										<li>
+											<h2>Settings</h2>
+											<span class="required_notification centring">* Denotes Required Field</span>
+										</li>
+										<li>
+											<label for="login">Login</label>
+											<input type="text" name="login" required>
+										</li>
+										<li>
+											<label for="email">Email</label>
+											<input type="email" name="email" required>
+										</li>
+										<li>
+											<label for="nickname">Nick</label>
+											<input type="text" name="nickname" required>
+										</li>
+										<li>
+											<label class="file_upload">
+												<span class="button">Выбрать</span>
+												<mark>Файл не выбран</mark>
+												<input type="file">
+											</label>
+										</li>
+										<li>
+											<button class="submit" type="submit">Submit Form</button>
+										</li>
+									</ul>
+								</form> 
+							</div>
+							<div class="ask_new_question">
+								<a href="new_question.html" class="new_question centring">
+									<span>Ask New Question!</span>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="aside">
+							<div class="aside-top" >
+								<div class="p-tags centring"><span>Popular tags</span></div>
+								<ul class="content-list">
+									<li><a href="#">B_baster</a></li>
+									<li><a href="#">B_baster</a></li>
+									<li><a href="#">B_baster</a></li>
+									<li><a href="#">B_baster</a></li>
+									<li><a href="#">B_baster</a></li>
+								</ul>
+							</div>
+
+							<div class="aside-bottom">
+								<div class="p-tags centring"><span>Best Members</span></div>
+								<ul class="content-list">
+									<li><a href="#">MR.Robot</a></li>
+									<li><a href="#">MR.Robot</a></li>
+									<li><a href="#">MR.Robot</a></li>
+									<li><a href="#">MR.Robot</a></li>
+									<li><a href="#">MR.Robot</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4">
+						<div class="footer-inc">
+							<span>© 2016 b_baster, Inc.</span>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="footer-logo">
+							<div class="logo">
+								<a href="index.html" class="logo-link"></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="footer-social">
+							<a href="https://vk.com/gde_9i" class="footer-social-1"><img src="logaster/vk.png" alt="vk"> Nik</a>
+							<a href="https://vk.com/id361256799" class="footer-social-1"><img src="logaster/vk.png" alt="vk">  Vova</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+		  <!-- <script>
+		  			var	k = new Date();
+		  			var	day = k.getDate();
+		  			var month = k.getMonth() + 1;
+		  			var year = k.getYear()-100;
+		  			var hours = k.getHours();
+		  			var minutes = k.getMinutes();
+		  			if (day < 10) {
+		  				day = "0" + day;
+		  			}
+		  			if (month < 10) {
+		  				month = "0" + day;
+		  			}
+		  			if (hours < 10) {
+		  				hours = "0" + hours;
+		  			}
+		  			if (minutes < 10) {
+		  				minutes = "0" + minutes;
+		  			}
+		  			document.getElementById('data').innerHTML =
+		  			day + "." + month + "." + year + " " + hours + ":" + minutes;
+		  		</script> -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.js"></script>
+</body>
+</html>
+
+
